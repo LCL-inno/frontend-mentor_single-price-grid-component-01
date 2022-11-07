@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution URL here](https://github.com/LetCL/frontend-mentor_single-price-grid-component-01)
+- Live Site URL: [Live site URL here](https://letcl.github.io/frontend-mentor_single-price-grid-component-01/)
 
 ## My process
 
