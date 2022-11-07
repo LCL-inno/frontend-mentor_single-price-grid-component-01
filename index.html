@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <!-- Load the used style -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="cssw/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <title>Frontend Mentor | Single Price Grid Component</title>
+
+ 
+</head>
+<body>
+  <!-- I create a global container -->
+  <div class="container">
+    <div class="primary-section">
+      <!-- I indicate the main tittle, -->
+      <h1 class="main-title title">Join our community</h1>
+      <!-- the main section, -->
+      <section class="main-section section">
+        <!-- with its title -->
+        <h2 class="section-title title">30-day, hassle-free money back guarantee</h2>
+        <!-- and its paragraph content, -->
+        <p>Gain access to our full library of tutorials along with expert code reviews.</p>
+        <p>Perfect for any developers who are serious about honing their skills.</p>
+      </section>
+    </div>
+
+    <!-- and its secondary sections in group by div tag.-->
+    <div class="secondary-sections">
+      <!-- I specify the secondary sections which are similiar to cards in hierarchy. -->
+      <!-- At the primary card section, -->
+      <section class="card-section primary-card section">
+        <!-- I create a section title -->
+        <h2 class="section-title title">Monthly Subscription</h2>
+        <!-- and your content: -->
+        <!-- prize per month,  -->
+        <p class="mark-p"><strong class="marked">&dollar;29</strong> <span class="no-marked">per month</span></p>
+        <!-- prize per day -->
+        <p class="final-p">Full access for less than &dollar;1 a day</p>
+        <!-- and the anchor with its appareance of a button.  -->
+        <a href="#" class="sign-up-button">Sign Up</a>
+      </section>
+
+      <!-- At the secondary card section, I see less weight for its style.-->
+      <section class="card-section secondary-card section">
+        <!-- Then, I create its section title -->
+        <h2 class="section-title title">Why Us</h2>
+        <!-- and the optional click-list of the link items about the why of the join the community. -->
+        <ul class="why-ul">
+          <li class="why-ul-item"><a href="#">Tutorials by industry experts</a></li>
+          <li class="why-ul-item"><a href="#">Peer &amp; expert code review</a></li>
+          <li class="why-ul-item"><a href="#">Coding exercises</a></li>
+          <li class="why-ul-item"><a href="#">Access to our GitHub repos</a></li>
+          <li class="why-ul-item"><a href="#">Community forum</a></li>
+          <li class="why-ul-item"><a href="#">Flashcard decks</a></li>
+          <li class="why-ul-item"><a href="#">New videos every week</a></li>
+        </ul>
+      </section>
+    </div>
+  </div>
+  
+</body>
+</html>

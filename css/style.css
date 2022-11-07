@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+
+/* :root (mayor especificidad) == html */
+:root {
+    --width-mobile: 375px;
+    --width-desktop: 1440px;
+
+    /* Primary colors */
+    --primary1-color: hsl(179, 62%, 43%);
+    --primary2-color: hsl(71, 73%, 54%);
+
+    /* Secondary colors */
+    --secondary1-color: hsl(204, 43%, 93%);
+    --secondary2-color: hsl(218, 22%, 67%);
+
+    /* Button shadow box color */
+    --button-box-shadow: rgba(0, 0, 0, 0.1);
+
+    /* Basic color transparents */
+    /* Black */
+    --black80transp-color: rgba(255, 255, 255, 0.8);
+
+    /* White */
+    --white-color: rgb(255, 255, 255);
+    --white50transp-color: rgba(255, 255, 255, 0.5); 
+    --white20transp-color: rgba(255,255,255,.2);
+
+    /* Border radius */
+    --border-radius1r: 2.1rem;
+
+    /* Padding min */
+    --min-padding: 1.5em;
+
+}
+
+
+/* Really, I used to use the relatived width from border of the box */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: left;
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    color: var(--secondary2-color);
+    background-color: var(--secondary1-color);
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--secondary1-color);
+}
+
+.container {
+    max-width: var(--width-desktop);
+    min-width: var(--width-mobil);
+    padding: 0;
+    margin: 0;
+    border-radius: var(--border-radius1r);
+}
+
+h1, 
+h2,
+strong {
+    font-weight: 700;
+}
+
+
+/*Design*/
+
+
+.card.card__header {
+    background-color: rgb(255, 255, 255);
+    color: var(--neutral-2);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+.card.card__header .card__title {
+    color: var(--primary-1);
+}
+
+
+.card__suscription, .card__why-us{
+    color: var(--neutral-1);
+}
+
+.card__why-us {
+    box-shadow: inset 0 0 100vw rgba(255,255,255,.2);
+    border-top-right-radius: var(--border-radius);
+}
+
+.card__title, .card__subtitle{
+    margin-bottom: 1em;
+}
+
+.card__subtitle {
+    color: var(--primary-2);
+    font-size: 1.2em;
+}
+
+.card__price {
+    margin-bottom: .5em;
+}
+
+.card__price strong {
+    margin-right: .3em;
+    font-size: 2em;
+    vertical-align: middle;/*Esta propiedad sólo cuando los elementos adyacencentes están en línea también*/
+}
+
+.btn {
+    padding: 1em;
+    margin: 1.5em 0;
+    background-color: var(--primary-2);
+    width: 100%;
+    color: var(--neutral-1);
+    border-radius: var(--border-radius);
+}
+    .btn:active{
+        box-shadow: inset 0 0 .1em black;
+    }
+
+.main-section p {
+    color: var(--secondary2-color);
+}
+
+    .main-section .section-title{
+        color: var(--primary2-color);
+    }
+
+.main-title {
+    background-color: var(--white-color);
+    margin-bottom: var(--min-padding);
+    color: var(--primary1-color);
+}
+
+.primary-section {
+    border-top-left-radius: var(--border-radius1r);
+    border-top-right-radius: var(--border-radius1r);
+    background-color: var(--white-color); 
+    padding: var(--min-padding);
+}
+
+
+/* Then, I use flexbox to adapt the child'section */
+.secondary-sections{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    border-width: 0;
+    flex-basis: 100%; 
+    background-color: var(--primary1-color);
+
+    border-bottom-left-radius: var(--border-radius1r);
+    border-bottom-right-radius: var(--border-radius1r);
+}
+
+    .secondary-sections p{
+        color: var(--secondary1-color);
+    }
+
+
+
+.primary-card {
+    border-bottom-left-radius: var(--border-radius1r);
+}
+
+.secondary-card {
+    background-color: var(--white20transp-color);
+    border-bottom-right-radius: var(--border-radius1r);
+    flex-basis: 100%;
+    border-style: none;
+    border-radius: 0;
+
+}
+
+.section-title {
+    color:  var(--secondary1-color);
+}
+
+.card-section {
+    flex: 1 1 var(--width-mobil); 
+    padding: var(--min-padding);
+}
+
+/* Then, I use flexbox to adapt the child's part of the paragraphs */
+.mark-p {
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
+}
+
+.marked {
+    font-size: 2.5rem;
+}
+
+.no-marked {
+    justify-content: center;
+    padding-left: 10px;
+    color: var(--white50transp-color); 
+}
+
+.final-p {
+    padding-bottom: .8em;
+}
+
+
+.sign-up-button {
+    display: inline-block;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1em;
+    /*
+    border-radius: .2em;
+    /* 
+    Other similar option with :
+        height: 50px;
+        line-height: 50px; 
+        width: 450px;
+    */
+    background-color: var(--primary2-color);
+    color: var(--black80transp-color);
+    box-shadow: 1px 4px 4px 1px var(--button-box-shadow);
+    text-align: center;
+    font-weight: bold;
+
+}
